@@ -206,11 +206,17 @@
     <script>
         lucide.createIcons();
 
-        const url = "https://script.google.com/macros/library/d/1vwLLr-WbR8wTkXrEiVIly31rxJBJNGfyYw5A_TQ6rEK8coPWd61UnGxh/1";
+        const url = "https://script.google.com/macros/s/AKfycbzxnZCIGeX9AQGTKBuU7LgfZiUGas2EXaKlbTsh2MtYnwwJL0VVrUjDwIe1HPnUrCHv/exec";
+
+        let can_sumbit = true;
 
         document.getElementById("contact-form").addEventListener("submit", async (e) => {
             e.preventDefault();
 
+            if (!can_sumbit)
+                return;
+
+            can_sumbit = false;
             const data = {
                 name: document.getElementById("name").value,
                 type: document.getElementById("role").value,
@@ -221,26 +227,25 @@
             try {
                 const res = await fetch(url, {
                     "method": "POST",
+                    "mode": "no-cors",
                     headers: {
                         "Content-Type": "application/json"
                     },
                     "body": JSON.stringify(data),
                 });
 
-                const result = await res.json();
+                alert("Your data inserted successfully");
+                document.getElementById("name").value = "";
+                document.getElementById("mail").value = "";
+                document.getElementById("phone").value = "";
 
-                if (result.success)
-                {
-                    alert("Your data inserted successfully");
-                    document.getElementById("name").value = "";
-                    document.getElementById("role").value = "";
-                    document.getElementById("mail").value = "";
-                    document.getElementById("phone").value = "";
-                }
 
             } catch (error) {
+                console.error(error);
                 alert("Couldn't add you please try again");
             }
+
+            can_sumbit = true;
         })
     </script>
 </body>
