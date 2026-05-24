@@ -7,6 +7,7 @@
     <title>Sehety</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body>
@@ -31,20 +32,179 @@
         </div>
     </div>
 
-    <div class="grid grid-cols-2 grid-rows-1 gap-2">
+    <div class="flex flex-col md:flex-row gap-4 m-8">
         <div>
             <h1 class="text-5xl lg:text-7xl font-extrabold text-slate-900 leading-[1.1] mb-6 tracking-tight">One Digital
                 Profile.</h1>
             <h1 class="text-5xl lg:text-7xl font-extrabold text-teal-600 leading-[1.1] mb-6 tracking-tight">A lifetime
                 of better care.</h1>
+
+            <div class="flex flex-col gap-4 mb-10">
+                <p class="text-lg text-slate-600 leading-relaxed border-l-4 border-teal-500 pl-4 py-1">
+                    <span class="font-semibold text-slate-800">For Patients:</span> Own your complete health history.
+                </p>
+                <p class="text-lg text-slate-600 leading-relaxed border-l-4 border-slate-300 pl-4 py-1">
+                    <span class="font-semibold text-slate-800">For Doctors:</span> Access instant, comprehensive medical
+                    records to diagnose faster and more accurately.
+                </p>
+            </div>
+
+            <form
+                class="flex flex-col gap-4 max-w-md bg-white p-6 rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100">
+                <div class="space-y-2">
+                  <label htmlFor="role-select" class="text-xs font-bold uppercase tracking-wider text-slate-400 block pb-1">Join as a:</label>
+                  <div class="flex items-center gap-3 bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus-within:border-teal-500 focus-within:ring-2 focus-within:ring-teal-500/20 transition-all">
+                    <div data-lucide="users" class="w-5 h-5 text-teal-600 shrink-0"></div>
+                    <select
+                      id="role-select"
+                      class="w-full bg-transparent outline-none text-slate-700 font-semibold cursor-pointer"
+                    >
+                      <option value="patient" class="text-slate-800 font-semibold">Patient</option>
+                      <option value="doctor" class="text-slate-800 font-semibold">Doctor</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="space-y-3">
+                    <div
+                        class="flex items-center gap-3 bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus-within:border-teal-500 focus-within:ring-2 focus-within:ring-teal-500/20 transition-all">
+                        <div data-lucide="user" class="w-5 h-5 text-slate-400 shrink-0"></div>
+                        <input type="text" placeholder="Full Name" required class="w-full bg-transparent outline-none text-slate-700 placeholder:text-slate-400
+                        font-medium" />
+                    </div>
+
+                    <div
+                        class="flex items-center gap-3 bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus-within:border-teal-500 focus-within:ring-2 focus-within:ring-teal-500/20 transition-all">
+                        <div data-lucide="mail" class="w-5 h-5 text-slate-400 shrink-0"></div>
+                        <input type="text" placeholder="Email" required class="w-full bg-transparent outline-none text-slate-700 placeholder:text-slate-400
+                        font-medium" />
+                    </div>
+
+                    <div
+                        class="flex items-center gap-3 bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus-within:border-teal-500 focus-within:ring-2 focus-within:ring-teal-500/20 transition-all">
+                        <div data-lucide="phone" class="w-5 h-5 text-slate-400 shrink-0"></div>
+                        <input type="tel" placeholder="Phone" required class="w-full bg-transparent outline-none text-slate-700 placeholder:text-slate-400
+                        font-medium" />
+                    </div>
+                </div>
+
+                <button type="submit"
+                    class="w-full mt-2 bg-teal-600 text-white px-6 py-4 rounded-xl text-lg font-bold hover:bg-teal-700 transition-colors flex items-center justify-center gap-2 shadow-lg shadow-teal-600/30">
+                    Secure Your Spot
+                    <div data-lucide="arrow-right" class="w-5 h-5"></div>
+                </button>
+                <p class="text-center text-xs text-slate-400 mt-2 font-medium">Join 1,420+ patients and doctors.</p>
+            </form>
         </div>
         <div
-            class="lg:ml-auto border rounded-xl shadow-2xl overflow-hidden border-8 border-white group mx-auto lg:mx-0 mt-8 lg:mt-0">
+            class="lg:ml-auto border rounded-2xl shadow-2xl overflow-hidden border-8 border-white group mx-auto lg:mx-0 mt-8 lg:mt-0">
 
-            <img src="Doctor.jpg" alt="Doctor consulting patient" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <img src="Doctor.jpg" alt="Doctor consulting patient"
+                class="w-full h-full md:w-2xl md:h-2xl aspect-square md:aspect-[4/5] object-cover group-hover:scale-105 transition-transform duration-700">
         </div>
     </div>
     </div>
+
+    <section class="py-24 px-6 lg:px-12 bg-white relative z-10">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-5xl font-bold text-slate-900 mb-6 tracking-tight">Remarkable Features</h2>
+                <p class="text-lg text-slate-500 max-w-2xl mx-auto leading-relaxed">Designed carefully for both patients
+                    and healthcare providers to ensure the best possible care coordination.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div
+                    class="bg-slate-50 rounded-3xl p-8 border border-slate-100 hover:shadow-xl hover:shadow-teal-900/5 transition-all group flex flex-col h-full">
+                    <div
+                        class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-sm mb-6 group-hover:scale-110 transition-transform text-teal-600 shrink-0">
+                        <div data-lucide="clock" class="w-7 h-7"></div>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Unified Timeline</h3>
+                    <p class="text-slate-600 leading-relaxed flex-grow">View your entire health history chronologically.
+                        No more digging through scattered files.</p>
+                </div>
+
+                <div
+                    class="bg-slate-50 rounded-3xl p-8 border border-slate-100 hover:shadow-xl hover:shadow-blue-900/5 transition-all group flex flex-col h-full">
+                    <div
+                        class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-sm mb-6 group-hover:scale-110 transition-transform text-blue-600 shrink-0">
+                        <div data-lucide="share2" class="w-7 h-7"></div>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">One-Click Share</h3>
+                    <p class="text-slate-600 leading-relaxed flex-grow">Instantly grant temporary, secure access to your
+                        profile when visiting a new specialist.</p>
+                </div>
+
+                <div
+                    class="bg-slate-50 rounded-3xl p-8 border border-slate-100 hover:shadow-xl hover:shadow-teal-900/5 transition-all group flex flex-col h-full">
+                    <div
+                        class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-sm mb-6 group-hover:scale-110 transition-transform text-teal-600 shrink-0">
+                        <div data-lucide="clipboard-list" class="w-7 h-7"></div>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Smart Tracking</h3>
+                    <p class="text-slate-600 leading-relaxed flex-grow">Log vitals, track lab metrics, and visualize
+                        your progress with easy-to-read charts.</p>
+                </div>
+
+                <div
+                    class="bg-slate-50 rounded-3xl p-8 border border-slate-100 hover:shadow-xl hover:shadow-slate-900/5 transition-all group flex flex-col h-full">
+                    <div
+                        class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-sm mb-6 group-hover:scale-110 transition-transform text-slate-700 shrink-0">
+                        <div data-lucide="users" class="w-7 h-7"></div>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Family Profiles</h3>
+                    <p class="text-slate-600 leading-relaxed flex-grow">Manage health records for your children or aging
+                        parents all from a single master account.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer
+        class="bg-slate-50 border-t border-slate-200 lg:h-40 py-12 lg:py-0 flex items-center px-6 lg:px-12 relative z-10">
+        <div class="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+            <div class="flex gap-4 items-start group">
+                <div
+                    class="w-12 h-12 rounded-2xl bg-teal-50 group-hover:bg-teal-100 transition-colors flex items-center justify-center shrink-0 border border-teal-100">
+                    <div data-lucide="shield" class="w-6 h-6 text-teal-700"></div>
+                </div>
+                <div>
+                    <h3 class="font-bold text-slate-900 mb-1 text-lg group-hover:text-teal-700 transition-colors">
+                        Permanent Records</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Scans, prescriptions, and lab results in one
+                        encrypted, lifelong repository.</p>
+                </div>
+            </div>
+            <div class="flex gap-4 items-start group">
+                <div
+                    class="w-12 h-12 rounded-2xl bg-blue-50 group-hover:bg-blue-100 transition-colors flex items-center justify-center shrink-0 border border-blue-100">
+                    <div data-lucide="stethoscope" class="w-6 h-6 text-blue-700"></div>
+                </div>
+                <div>
+                    <h3 class="font-bold text-slate-900 mb-1 text-lg group-hover:text-blue-700 transition-colors">
+                        Streamlined Diagnosis</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Doctors instantly review comprehensive history
+                        to avoid redundant tests.</p>
+                </div>
+            </div>
+            <div class="flex gap-4 items-start group">
+                <div
+                    class="w-12 h-12 rounded-2xl bg-slate-100 group-hover:bg-slate-200 transition-colors flex items-center justify-center shrink-0 border border-slate-200">
+                    <div data-lucide="check-circle2" class="w-6 h-6 text-slate-700"></div>
+                </div>
+                <div>
+                    <h3 class="font-bold text-slate-900 mb-1 text-lg group-hover:text-slate-900 transition-colors">
+                        Privacy First</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Full ownership of your patient data. You
+                        decide exactly who sees what.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 
 </html>
