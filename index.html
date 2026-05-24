@@ -1,36 +1,50 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sehety</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  </head>
-  <body>
+</head>
+
+<body>
     <header>
-      <div class="logo">
-        <span>
-          <img src="logo.svg" alt="Logo" />
-        </span>
-        <h1>Sehety</h1>
-      </div>
+        <div class="logo">
+            <span>
+                <img src="logo.svg" alt="Logo" />
+            </span>
+            <h1>Sehety</h1>
+        </div>
     </header>
 
     <div class="m-3">
-      <div
-        class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-teal-50 text-teal-800 text-xs font-bold uppercase tracking-wider mb-8 border border-teal-200/60 shadow-sm"
-      >
-        <span class="relative flex h-2 w-2">
-          <span
-            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"
-          ></span>
-          <span
-            class="relative inline-flex rounded-full h-2 w-2 bg-teal-500"
-          ></span>
-        </span>
-        Waitlist is Open
-      </div>
+        <div
+            class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-teal-50 text-teal-800 text-xs font-bold uppercase tracking-wider mb-8 border border-teal-200/60 shadow-sm">
+            <span class="relative flex h-2 w-2">
+                <span
+                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-teal-500"></span>
+            </span>
+            Waitlist is Open
+        </div>
     </div>
-  </body>
+
+    <div class="grid grid-cols-2 grid-rows-1 gap-2">
+        <div>
+            <h1 class="text-5xl lg:text-7xl font-extrabold text-slate-900 leading-[1.1] mb-6 tracking-tight">One Digital
+                Profile.</h1>
+            <h1 class="text-5xl lg:text-7xl font-extrabold text-teal-600 leading-[1.1] mb-6 tracking-tight">A lifetime
+                of better care.</h1>
+        </div>
+        <div
+            class="lg:ml-auto border rounded-xl shadow-2xl overflow-hidden border-8 border-white group mx-auto lg:mx-0 mt-8 lg:mt-0">
+
+            <img src="Doctor.jpg" alt="Doctor consulting patient" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+        </div>
+    </div>
+    </div>
+</body>
+
 </html>
